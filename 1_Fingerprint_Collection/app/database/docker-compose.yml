@@ -1,0 +1,29 @@
+version: "3"
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    user: "${UID}"
+    ports:
+      - "${PG_PORT}:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+      #- ./data/db.sql:/docker-entrypoint-initdb.d/dbinit.sql
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      POSTGRES_DB: ${PG_DATABASE}
+  
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    depends_on: 
+      - postgres
+    ports:
+      - 8032:8080
+
+networks:
+  default:
+    name: fp-docker
+

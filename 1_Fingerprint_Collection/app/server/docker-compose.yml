@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  js-template-attacks:
+    image: node:latest
+    #user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - ./jsta:/home/node/app
+    command: node server.js 
+    ports:
+      - 8080:8080
+    #restart: unless-stopped
+
+  fingerprintjs:
+    image: node:latest
+    working_dir: /home/node/app
+    volumes:
+      - ./fpjs:/home/node/app
+    command: node index.js 
+    ports:
+      - 5000:5000
+
+networks: 
+  default: 
+    name: fp-docker 
