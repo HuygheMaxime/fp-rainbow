@@ -5,20 +5,30 @@
 
 ## :page_facing_up: Description
 
-**FP-Rainbow** is a platform for measuring the impact of Chromium-based browser configuration parameters on their fingerprint.
+TL;DR: **FP-Rainbow** is a platform for measuring the impact of Chromium-based browser configuration parameters on their fingerprint.
 
-## :file_cabinet: Repository contents
+This work has been presented in the paper [FP-Rainbow: Fingerprint-Based Browser Configuration Identification](https://doi.org/10.1145/3696410.3714699) published at [The Web Conference 2025](https://www2025.thewebconf.org/).
+
+<u>Authors</u>:
+- [Maxime Huyghe](https://mhuyghe.fr/)
+- [Clément Quinton](https://clementquinton.github.io/)
+- [Walter Rudametkin](https://rudametw.github.io/)
+
+## :file_cabinet: Repository Structure
 
 ```
 .
-├── 0_Dataset_and_Results     # The fingerprints, the impact of switches on fingerprints, etc
-├── 1_Fingerprint_Collection  # The installation script and the Fingerprint Collection parts
-└── README.md                 # The current readme file
+├── 0_Dataset_and_Results     # Fingerprints and their analysis, impact of switches (download required)
+├── 1_Fingerprint_Collection  # Installation script and Fingerprint Collection components
+└── README.md                 # This readme file
 ```
 
 ## :books: Instructions
 
-Dataset, the results and browsers executable are available here: https://s.42l.fr/fp-rainbow
+The dataset, results, and browser executables are available at: https://s.42l.fr/fp-rainbow
 
-To use the **FP-Rainbow** pipeline, please start by downloading the browser executables and follow the instructions in [1_Fingerprint_Collection](./1_Fingerprint_Collection) to run browser configurations and collect fingerprints.
-To analyse the results or the already generated fingerprint, download the dataset and the results from the link above.
+To use the **FP-Rainbow** pipeline:
+1. Download the browser executables
+2. Follow the instructions in [1_Fingerprint_Collection](./1_Fingerprint_Collection) to run browser configurations and collect fingerprints
+
+To analyse the results of the already generated fingerprint, download the dataset and the results from the link above.
