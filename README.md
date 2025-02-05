@@ -25,7 +25,7 @@ This work has been presented in the paper [FP-Rainbow: Fingerprint-Based Browser
 
 ## :books: Instructions
 
-The dataset, results, and browser executables are available at: https://s.42l.fr/fp-rainbow
+The dataset, results, and browser executables are available at: https://doi.org/10.5281/zenodo.13933676
 
 To use the **FP-Rainbow** pipeline:
 1. Download the browser executables
